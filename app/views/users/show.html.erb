@@ -1,0 +1,13 @@
+<h2><%= current_user.name %></h2>
+
+<div class="user">
+	<%= link_to "Edit my profile", edit_user_registration_path %>
+	<table class="details">
+		<tbody>
+			<tr>
+				<th>Email:</th>
+				<td><%= current_user.email %></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

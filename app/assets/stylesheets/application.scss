@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Universal */
+
+body {
+  margin-top: 60px;
+}
+
+/* navbar formatting */
+
+.navbar-inverse .navbar-brand {
+  color: white;
+	font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Formatting the footer */
+
+#footer{
+	border-top: 1px solid #E7E7EC;
+	padding-top: 8px;
+	margin-top: 10px;
+}
+.footer-body{
+	text-align: center;
+	padding-bottom: 5px;
+}

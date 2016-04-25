@@ -9,12 +9,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise'
 
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.1.0'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'sqlite3'
