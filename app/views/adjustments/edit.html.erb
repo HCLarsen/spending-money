@@ -1,0 +1,33 @@
+<h2>Edit Adjustment</h2>
+
+<%= form_for(@adjustment) do |f| %>
+
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :income_or_expense %>
+    <%= f.select :income_or_expense, Adjustment.income_or_expenses.keys  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date? %>
+    <%= f.check_box :date? %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :frequency %>
+    <%= f.text_field :frequency_num, size: 1  %>
+    <%= f.select :frequency, Adjustment.frequencies.keys  %>
+  </div>
+
+  <%= f.submit "Create Adjustment", class: "btn btn-primary" %>
+
+<% end %>

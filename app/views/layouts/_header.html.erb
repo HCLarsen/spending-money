@@ -3,6 +3,13 @@
 		<div class="navbar-header">
       <%= link_to "Spending Money", root_path, class: "navbar-brand" %>
 		</div>
+		<div id="navbar">
+			<ul class="nav navbar-nav">
+				<% if user_signed_in? %>
+					<li><%= link_to "Budget", adjustments_path %></li>
+				<% end %>
+			</ul>
+		</div>
     <ul class="nav navbar-nav navbar-right">
 			<% if user_signed_in? %>
 				<li><%= link_to current_user.name, profile_path %></li>

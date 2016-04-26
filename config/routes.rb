@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root                'pages#home'
   get  'profile' =>   'users#show'
 
+  resources :adjustments
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   # Example of regular route:
