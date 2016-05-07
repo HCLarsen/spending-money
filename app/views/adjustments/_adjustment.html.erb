@@ -1,0 +1,9 @@
+<li class="adjustment-info">
+  <span class="name"><%= adjustment.name %></span>
+  <% if adjustment.date? %>
+  <span class="date"><%= pluralize(adjustment.frequency_num, adjustment.frequency.singularize) %></span>
+  <% end %>
+  <span class="value">Amount:<%= number_to_currency(adjustment.value.abs, precision: 0) %></span>
+  <span><%= link_to "Edit", edit_adjustment_path(adjustment) %></span>
+  <span><%= link_to "Delete", adjustment_path(adjustment), method: :delete %></span>
+</li>

@@ -1,3 +1,22 @@
 // Place all the styles related to the Adjustments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.empty-table {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.adjustments {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-left: 0px;
+	border: 3px solid #bbb;
+}
+
+.adjustment-info {
+	border: 1px solid #bbb;
+	padding: 10px;
+	color: #000;
+}

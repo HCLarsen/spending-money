@@ -3,8 +3,13 @@
 <%= form_for(@adjustment) do |f| %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :value %><br />
-    <%= f.text_field :value, autofocus: true %>
+    <%= f.text_field :value %>
   </div>
 
   <div class="field">
@@ -17,15 +22,17 @@
     <%= f.check_box :date? %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_select :date  %>
-  </div>
+  <div class="date-selection">
+    <div class="field">
+      <%= f.label :date %>
+      <%= f.date_select :date  %>
+    </div>
 
-  <div class="field">
-    <%= f.label :frequency %>
-    <%= f.text_field :frequency_num, size: 1  %>
-    <%= f.select :frequency, Adjustment.frequencies.keys  %>
+    <div class="field">
+      <%= f.label :frequency %>
+      <%= f.text_field :frequency_num, size: 1  %>
+      <%= f.select :frequency, Adjustment.frequencies.keys  %>
+    </div>
   </div>
 
   <%= f.submit "Create Adjustment", class: "btn btn-primary" %>

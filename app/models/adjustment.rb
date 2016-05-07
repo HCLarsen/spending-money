@@ -7,4 +7,8 @@ class Adjustment < ActiveRecord::Base
   def date?
     !date.nil?
   end
+
+  def duration
+    self.frequency_num.send self.frequency.downcase
+  end
 end

@@ -1,6 +1,25 @@
 <h1>Income and Costs</h1>
-<h2>Incomes</h2>
+
+<h2>Income</h2>
+<ul class="adjustments">
+<% if current_user.income.any? %>
+  <%= render @income %>
+<% else %>
+  <li class="empty-table">No Income Entered</li>
+<% end %>
+</ul>
+<h4>Total Monthly Income: <%= number_to_currency(current_user.total_income, precision: 0) %></h4>
 
 <h2>Expenses</h2>
+<ul class="adjustments">
+  <% if current_user.expenses.any? %>
+    <%= render @expenses %>
+  <% else %>
+    <li class="empty-table">No Expenses Entered</li>
+  <% end %>
+</ul>
+<h4>Total Monthly Expenses: <%= number_to_currency(current_user.total_expenses, precision: 0) %></h4>
+
+<h3>Monthly Net Income: <%= number_to_currency(current_user.monthly_net,precision: 0) %></h3>
 
 <%= link_to "Add Adjustment", new_adjustment_path, class: "btn btn-lg btn-primary" %>
