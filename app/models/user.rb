@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
   def total_income
     total = 0
-    self.income.each do | inc |
+    self.income.each do |inc|
       if inc.date?
         total += inc.value * (1.month / inc.duration) if inc.duration <= 1.month
       else
@@ -39,5 +39,4 @@ class User < ActiveRecord::Base
   def monthly_net
     self.total_income - self.total_expenses
   end
-
 end

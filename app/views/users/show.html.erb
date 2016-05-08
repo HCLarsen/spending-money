@@ -10,15 +10,15 @@
 			</tr>
 			<tr>
 				<th>Monthly Income:</th>
-				<td><%= 0 %></td>
+				<td><%= current_user.total_income %></td>
 			</tr>
 			<tr>
 				<th>Monthly Costs:</th>
-				<td><%= 0 %></td>
+				<td><%= current_user.total_expenses %></td>
 			</tr>
 			<tr>
 				<th>Monthly Net:</th>
-				<td><%= 0 %></td>
+				<td><%= current_user.monthly_net %></td>
 			</tr>
 		</tbody>
 	</table>
