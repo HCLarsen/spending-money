@@ -11,9 +11,6 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
-# Use CoffeeScript for .coffee assets and views
-# gem 'coffee-rails', '~> 4.1.0'
-
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
