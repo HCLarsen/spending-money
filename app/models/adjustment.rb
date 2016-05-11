@@ -9,7 +9,7 @@ class Adjustment < ActiveRecord::Base
   end
 
   def income_or_expense
-    if value >= 0
+    if value && value >= 0
       "Income"
     else
       "Expense"
