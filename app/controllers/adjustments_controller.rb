@@ -1,4 +1,6 @@
 class AdjustmentsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @adjustment = Adjustment.new
   end
@@ -26,6 +28,15 @@ class AdjustmentsController < ApplicationController
   end
 
   def update
+    @adjustment = Adjustment.find(params[:id])
+    # adjusts the polarity of the value for expenses
+    if params[:adjustment][:income_or_expense] == "Expense"
+      params[:adjustment][:value] = "-" + params[:adjustment][:value]
+    end
+    if @adjustment.update(adjustment_params)
+      flash[:success] = "Adjustment Created"
+      redirect_to adjustments_path
+    end
   end
 
   def destroy

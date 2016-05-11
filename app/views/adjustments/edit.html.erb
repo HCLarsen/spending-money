@@ -9,7 +9,7 @@
 
   <div class="field">
     <%= f.label :value %><br />
-    <%= f.text_field :value, autofocus: true %>
+    <%= f.text_field :value, :value => @adjustment.value.abs %>
   </div>
 
   <div class="field">
@@ -33,6 +33,6 @@
     <%= f.select :frequency, Adjustment.frequencies.keys  %>
   </div>
 
-  <%= f.submit "Create Adjustment", class: "btn btn-primary" %>
+  <%= f.submit "Save Adjustment", class: "btn btn-primary" %>
 
 <% end %>
