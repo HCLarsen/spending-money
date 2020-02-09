@@ -1,24 +1,5 @@
-# README
+# Spending Money
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple money management app. By tracking your paycheques and your regular expenses, and asking for your current bank balance (entered manually), it shows you how much extra money you currently have. This can help you decide how debt to pay off, how much money to transfer to your savings, or simply if you can afford to have a party.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Made with a Rails 6 API on the back end, and Reactjs on the front end.
