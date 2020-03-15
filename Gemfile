@@ -7,6 +7,7 @@ gem 'rails', '~> 6.0.0'
 gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 3.11'
 gem 'devise_token_auth', '~> 1.1'
+gem 'ice_cube', '~> 0.16.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
