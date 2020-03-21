@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Personal
+  user: one
+
+two:
+  name: Business
+  user: one
+
+three:
+  name: Personal
+  user: two
+
+four:
+  name: Joint
+  user: two

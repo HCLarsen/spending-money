@@ -1,0 +1,11 @@
+one:
+  name: Tony stark
+  email: tstark@example.org
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'FakePassword123!') %>
+  uid: "IronMan"
+
+two:
+  name: Carol Danvers
+  email: cdanvers@example.org
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'FakePassword123!') %>
+  uid: "CaptainMarvel"
