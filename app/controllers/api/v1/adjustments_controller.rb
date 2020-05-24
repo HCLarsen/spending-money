@@ -1,0 +1,2 @@
+class AdjustmentsController < ApplicationController
+end

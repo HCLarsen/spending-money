@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_041646) do
+ActiveRecord::Schema.define(version: 2020_03_21_185758) do
+
+  create_table "adjustments", force: :cascade do |t|
+    t.string "name"
+    t.decimal "amount", precision: 10, scale: 2
+    t.integer "budget_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["budget_id"], name: "index_adjustments_on_budget_id"
+  end
 
   create_table "budgets", force: :cascade do |t|
     t.string "name"
@@ -43,4 +52,5 @@ ActiveRecord::Schema.define(version: 2020_03_19_041646) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "adjustments", "budgets"
 end
